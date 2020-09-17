@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "t-ui"
+    }
+  },
+  "defaultProject": "t-ui",
+  "cli": {
+    "analytics": false
+  }
 }

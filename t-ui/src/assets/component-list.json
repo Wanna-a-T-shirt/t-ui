@@ -1,0 +1,58 @@
+[
+  {
+    "component_id": "service-1",
+    "down_stream_component_ids": [
+      "service-2"
+    ]
+  },
+  {
+    "component_id": "service-2",
+    "down_stream_component_ids": [
+      "service-3",
+      "service-5"
+    ]
+  },
+  {
+    "component_id": "service-3",
+    "down_stream_component_ids": [
+      "service-6",
+      "service-8"
+    ]
+  },
+  {
+    "component_id": "service-4",
+    "down_stream_component_ids": [
+      "service-1",
+      "service-5"
+    ]
+  },
+  {
+    "component_id": "service-5",
+    "down_stream_component_ids": [
+      "service-4",
+      "service-6",
+      "service-8"
+    ]
+  },
+  {
+    "component_id": "service-6",
+    "down_stream_component_ids": [
+      "service-2",
+      "service-8"
+    ]
+  },
+  {
+    "component_id": "service-7",
+    "down_stream_component_ids": [
+      "service-1",
+      "service-5"
+    ]
+  },
+  {
+    "component_id": "service-8",
+    "down_stream_component_ids": [
+      "service-4",
+      "service-7"
+    ]
+  }
+]

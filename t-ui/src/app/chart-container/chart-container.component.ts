@@ -11,7 +11,9 @@ import * as echarts from 'echarts';
 export class ChartContainerComponent implements OnInit {
   private nodeData: any[];
   private links: any[] = [];
+  private status: any;
   displayInfo: boolean = false;
+  componentName: string;
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +21,7 @@ export class ChartContainerComponent implements OnInit {
     this.getComponentList();
   }
 
-  private getComponentList(): void{
+  private getComponentList(): void {
     this.http.get('../../assets/relationship.json').subscribe((res: any[]) => {
       res.forEach(item => {
         item.name = item.componentId;
@@ -32,12 +34,19 @@ export class ChartContainerComponent implements OnInit {
   }
 
   private getRectColor(params): string {
-    if (params.data.type && params.data.type === 'alerts'){
+    if (params.data.type && params.data.type === 'alerts') {
       return '#006270';
     } else {
       return '#00e0c7';
     }
   }
+
+  private getStatus(): void {
+    this.http.get('../../assets/status.json').subscribe(res => {
+      this.status = res;
+    })
+  }
+
 
   initCharts(): void {
     const ec = echarts as any;
@@ -45,10 +54,10 @@ export class ChartContainerComponent implements OnInit {
 
     const option = {
       title: {
-          text: 'Who Touched My Service?',
-          textStyle: {
-            color: '#eee'
-          }
+        text: 'Who Touched My Service?',
+        textStyle: {
+          color: '#eee'
+        }
       },
       tooltip: {},
       color: [
@@ -67,7 +76,7 @@ export class ChartContainerComponent implements OnInit {
           name: 'Alerts',
           icon: 'circle',
           textStyle: {
-              color: '#006270'
+            color: '#006270'
           }
         },
         {
@@ -75,123 +84,115 @@ export class ChartContainerComponent implements OnInit {
           icon: 'rect',
           textStyle: {
             color: '#00e0c7'
-        }
+          }
         }]
       },
       animationDurationUpdate: 1500,
       backgroundColor: '#2a394f',
       animationEasingUpdate: 'quinticInOut',
       series: [
-          {
-              type: 'graph',
-              layout: 'force',
-              force: {
-                repulsion: [700, 800], // 相距距离
-                edgeLength: 200,
-                layoutAnimation: true,
-                initLayout: 'circular'
+        {
+          type: 'graph',
+          layout: 'force',
+          force: {
+            repulsion: [700, 800], // 相距距离
+            edgeLength: 200,
+            layoutAnimation: true,
+            initLayout: 'circular'
+          },
+          symbolSize: [120, 60],
+          roam: true,
+          draggable: true,
+          focusNodeAdjacency: true,
+          // symbol: 'rect',
+          edgeSymbol: ['circle', 'arrow'],
+          edgeSymbolSize: [2, 10],
+          edgeLabel: {
+            fontSize: 20
+          },
+          categories: [
+            {
+              name: 'Alerts',
+              symbol: 'circle'
+            }, {
+              name: 'Others',
+              symbol: 'rect'
+            }
+          ],
+          data: this.nodeData,
+          links: this.links,
+          lineStyle: {
+            normal: {
+              color: '#fff',
+              opacity: 0.7,
+              width: 1,
+              curveness: 0.2
             },
-              symbolSize: [120, 60],
-              roam: true,
-              draggable: true,
-              focusNodeAdjacency: true,
-              // symbol: 'rect',
-              edgeSymbol: ['circle', 'arrow'],
-              edgeSymbolSize: [2, 10],
-              edgeLabel: {
-                  fontSize: 20
-              },
-              categories: [
-                {
-                  name: 'Alerts',
-                  symbol: 'circle'
-                }, {
-                  name: 'Others',
-                  symbol: 'rect'
-                }
-            ],
-              data: this.nodeData,
-              links: this.links,
-              lineStyle: {
-                normal: {
-                  color: '#fff',
-                  opacity: 0.7,
-                  width: 1,
-                  curveness: 0.2
+            emphasis: {
+              color: '#fff',
+              opacity: 1,
+              width: 2,
+              curveness: 0.2,
+            }
+          },
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                position: 'insideTop',
+                fontFamily: 'sans-serif',
+                fontSize: 14,
+                formatter: (val) => {
+                  return this.formatLabel(val);
                 },
-                emphasis: {
-                  color: '#fff',
-                  opacity: 1,
-                  width: 2,
-                  curveness: 0.2,
-                }
-              },
-              itemStyle : {
-                normal: {
-                  label: {
-                    show: true,
-                    position: 'insideTop',
-                    fontFamily : 'sans-serif',
-                    fontSize : 14,
-                    formatter: (val) => {
-                     return this.formatLabel(val);
-                    },
-                    rich: {
-                      color1: {
-                          color: '#fff'
-                      },
-                      color2: {
-                          color: '#2a394f'
-                      }
+                rich: {
+                  color1: {
+                    color: '#fff'
                   },
-                  },
-                  opacity: 1,
-                  color: (params) => { return this.getRectColor(params); }
+                  color2: {
+                    color: '#2a394f'
+                  }
                 },
-                emphasis: {
-                  label: {
-                    show: true
-                  },
-                  opacity: 1
-                }
+              },
+              opacity: 1,
+              color: (params) => { return this.getRectColor(params); }
+            },
+            emphasis: {
+              label: {
+                show: true
+              },
+              opacity: 1
             }
           }
+        }
       ]
-  };
+    };
     lineChart.setOption(option);
 
     lineChart.on('click', (param) => {
-        console.log('param---->', param);  // 打印出param, 可以看到里边有很多参数可以使用
-        // 获取节点点击的数组序号
-        let arrayIndex = param.dataIndex;
-        console.log('arrayIndex---->', arrayIndex);
-        console.log('name---->', param.name);
-        if (param.dataType === 'node') {
-            alert("clicked node" + param.name);
-            this.displayInfo = true;
-        } else {
-            alert("clicked arrow" + param.value);
-        }
+      if (param.dataType === 'node') {
+        this.displayInfo = true;
+        this.componentName = param.name;
+      }
     });
-
   }
 
   private calculateLinks(relationShips: any[]) {
     relationShips.forEach(relationShip => {
-        let source = relationShip.componentId;
-        relationShip.downstreamComponentIds.forEach(downStream => {
-            this.links.push({'source': source, 'target': downStream});
-        });
+      let source = relationShip.componentId;
+      relationShip.downstreamComponentIds.forEach(downStream => {
+        this.links.push({ 'source': source, 'target': downStream });
+      });
     });
   }
 
   private formatLabel(val) {
     const newVal = val.name.replace(' ', '\n');
-    if (val.data.type && val.data.type === 'alerts'){
+    if (val.data.type && val.data.type === 'alerts') {
       return '{color1|' + newVal + '}';
     } else {
       const num = Math.ceil(Math.random() * 3);
-      switch(num){
+      switch (num) {
         case 1:
           return '{color2|' + newVal + '}';
         case 2:

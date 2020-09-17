@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentInfoComponent } from './component-info/component-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DialogModule} from 'primeng/dialog';
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {DialogModule} from 'primeng/dialog';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    DialogModule
+    DialogModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

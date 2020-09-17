@@ -1,3 +1,4 @@
-<p-dialog header="Info" styleClass="blue-theme-popup component-info-screen" [(visible)]="isShow" (onHide)="closeScreen()"> 
+<p-dialog header="Info" styleClass="component-info-screen" [(visible)]="isShow" [modal]="true" 
+    (onHide)="closeScreen()" [maximizable]="true"> 
     Content
 </p-dialog>

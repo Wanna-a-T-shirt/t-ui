@@ -968,11 +968,11 @@
 			"value":"/app/prod/portal/logs"
 		}
 	],
-	"dashboard":[
+	"gateway":[
 		{
 			"label":"Component Name",
 			"type":"text",
-			"value":"dashboard"
+			"value":"getway"
 		},
 		{
 			"label":"Component Owner",

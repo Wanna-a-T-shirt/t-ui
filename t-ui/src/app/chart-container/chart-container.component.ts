@@ -27,6 +27,7 @@ export class ChartContainerComponent implements OnInit {
       res.forEach(item => {
         item.name = item.componentId;
         item.symbol = item.type === 'alerts' ? 'circle' : 'rect';
+        item.category = item.type === 'alerts' ? 0 : 1;
       });
       this.nodeData = res;
       this.calculateLinks(res);

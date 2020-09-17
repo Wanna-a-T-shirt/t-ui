@@ -19,6 +19,7 @@ export class ChartContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getComponentList();
+    this.getStatus();
   }
 
   private getComponentList(): void {
@@ -26,6 +27,12 @@ export class ChartContainerComponent implements OnInit {
       res.forEach(item => {
         item.name = item.componentId;
         item.symbol = item.type === 'alerts' ? 'circle' : 'rect';
+        // item.itemStyle = {
+        //   "normal": {
+        //     "borderColor": item.type === 'alerts' ? 'green' : 'red'
+        //   }
+        // }
+        item.category = item.type === 'alerts' ? 0 : 1;
       });
       this.nodeData = res;
       this.calculateLinks(res);
@@ -44,7 +51,7 @@ export class ChartContainerComponent implements OnInit {
   private getStatus(): void {
     this.http.get('../../assets/status.json').subscribe(res => {
       this.status = res;
-    })
+    });
   }
 
 
@@ -104,7 +111,6 @@ export class ChartContainerComponent implements OnInit {
           roam: true,
           draggable: true,
           focusNodeAdjacency: true,
-          // symbol: 'rect',
           edgeSymbol: ['circle', 'arrow'],
           edgeSymbolSize: [2, 10],
           edgeLabel: {
@@ -137,20 +143,26 @@ export class ChartContainerComponent implements OnInit {
           },
           itemStyle: {
             normal: {
+              borderColor: '#fff',
+              borderWidth: 2 ,
+              borderType: 'solid' ,
               label: {
                 show: true,
-                position: 'insideTop',
+                position: 'inside',
                 fontFamily: 'sans-serif',
-                fontSize: 14,
                 formatter: (val) => {
                   return this.formatLabel(val);
                 },
                 rich: {
                   color1: {
-                    color: '#fff'
+                    color: '#fff',
+                    fontSize: 16,
+                    align: 'center'
                   },
                   color2: {
-                    color: '#2a394f'
+                    color: '#2a394f',
+                    fontSize: 16,
+                    align: 'center'
                   }
                 },
               },
@@ -191,16 +203,7 @@ export class ChartContainerComponent implements OnInit {
     if (val.data.type && val.data.type === 'alerts') {
       return '{color1|' + newVal + '}';
     } else {
-      const num = Math.ceil(Math.random() * 3);
-      switch (num) {
-        case 1:
-          return '{color2|' + newVal + '}';
-        case 2:
-          return '{color2|' + newVal + '}';
-        case 3:
-          return '{color2|' + newVal + '}';
-      }
-
+      return '{color2|' + newVal + '}';
     }
   }
 

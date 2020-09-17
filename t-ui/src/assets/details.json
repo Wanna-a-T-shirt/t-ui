@@ -1,0 +1,1712 @@
+{
+	"settlements":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"settlements"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Anil"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL P&P"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/settlements"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/settlements"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/settlement-service/logs"
+		}
+	],
+	"checklists":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"checklists"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Shawn"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/checklists"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/checklists"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/checklist-service/logs"
+		}
+	],
+	"reports":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"reports"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"John"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL FEEDS"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/reports"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox02"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"NA"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/report-jobs/logs"
+		}
+	],
+	"entitlement calculation":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"entitlement calculation"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Mahesh"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL EC"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/ec"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/ec"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/ec-service/logs"
+		}
+	],
+	"payments":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"payments"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Abhishek"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL P&P"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/payments"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/payments"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/payments-service/logs"
+		}
+	],
+	"portal adaptor":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"portal adaptor"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Shawn"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/notifications-adaptor"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/notifications-adaptor"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/notification-adaptor-service/logs"
+		}
+	],
+	"admin":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"admin"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Raindy"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL UI"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/web"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbuket.net/projects/t-shirt/webapp"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"43007/43009"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/tomcat/logs"
+		}
+	],
+	"business rules":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"business rules"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Virendra"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL ENVS"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/rules"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox02"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"NA"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/rules-lib/logs"
+		}
+	],
+	"archive adaptor":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"archive adaptor"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Shawn"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/notification-archive"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/archive-jobs/logs"
+		}
+	],
+	"security":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"security"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Awanish"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL ANNOUNCEMENT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/security"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/security"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/announcements-security/logs"
+		}
+	],
+	"UI":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"UI"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Raindy"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL UI"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/web"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbuket.net/projects/t-shirt/webapp"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"43007/43009"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/tomcat/logs"
+		}
+	],
+	"autopull service":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"autopull service"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Amit"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL EP"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/autopull"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/autopull"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/autopull-service/logs"
+		}
+	],
+	"postings":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"postings"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Anil"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL P&P"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/positions"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/positions"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/postings-service/logs"
+		}
+	],
+	"feeds":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"feeds"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"John"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL FEEDS"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/feeds"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox02"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"NA"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/feeds-jobs/logs"
+		}
+	],
+	"central config":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"central config"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Virendra"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL ENVS"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/configs"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox02"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"NA"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/config-lib/logs"
+		}
+	],
+	"workflow controller":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"workflow controller"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Awanish"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL ANNOUNCEMENT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/wc"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/wc"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/wc-service/logs"
+		}
+	],
+	"portal":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"portal"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Shawn"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/portal"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/portal"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/portal/logs"
+		}
+	],
+	"dashboard":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"dashboard"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Raindy"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL UI"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/dashboard"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbuket.net/projects/t-shirt/webapp"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/tomcat/logs"
+		}
+	],
+	"alerts UI":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"alerts UI"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Raindy"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL ASPEN UI"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/alertsui"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/alertsui"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/alert-web/logs"
+		}
+	],
+	"bots":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"bots"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Shawn"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/notification-bots"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"NA"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/bots-jobs/logs"
+		}
+	],
+	"jobs":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"jobs"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"John"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL FEEDS"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/jobs"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox02"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"NA"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/jobs/logs"
+		}
+	],
+	"positions":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"positions"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Amit"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL EP"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/positions"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/positions"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/positions-service/logs"
+		}
+	],
+	"alert jobs":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"alert jobs"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"John"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/alert-jobs"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox02"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"NA"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/alert-jobs/logs"
+		}
+	],
+	"announcements adaptor":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"announcements adaptor"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Awanish"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL ANNOUNCEMENT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/adaptor"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/adaptor"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/announcements-adaptor/logs"
+		}
+	],
+	"users":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"users"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Raindy"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL UI"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/web"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbuket.net/projects/t-shirt/webapp"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"43007/43009"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/tomcat/logs"
+		}
+	],
+	"alerts":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"alerts"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Shawn"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/alerts-service"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/alerts-service"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/alert-service/logs"
+		}
+	],
+	"announcements":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"announcements"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Awanish"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL ANNOUNCEMENT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/announcements"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/announcements"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/announcements-service/logs"
+		}
+	],
+	"notification replay util":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"notification replay util"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Shawn"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"NA"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/notification-replay"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"NA"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/notification-replay/logs"
+		}
+	],
+	"notifications":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"notifications"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Shawn"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL NOT&ALERT"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/notifications"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/notifications"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/notification-service/logs"
+		}
+	],
+	"accounnts":[
+		{
+			"label":"Component Name",
+			"type":"text",
+			"value":"accounnts"
+		},
+		{
+			"label":"Component Owner",
+			"type":"text",
+			"value":"Amit"
+		},
+		{
+			"label":"Contact Team DL",
+			"type":"email",
+			"value":"*GT GLOBAL EP"
+		},
+		{
+			"label":"Swagger link",
+			"type":"link",
+			"value":"https://swagger.net/projects/t-shirt/accounts"
+		},
+		{
+			"label":"Bitbucket link",
+			"type":"link",
+			"value":"https://bitbucket.net/projects/t-shirt/accounts"
+		},
+		{
+			"label":"Package version",
+			"type":"text",
+			"value":"INCOME.2020.8.0-RELEASE"
+		},
+		{
+			"label":"Deploy time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Build time",
+			"type":"text",
+			"value":"2020/9/17 13:00"
+		},
+		{
+			"label":"Server Name",
+			"type":"text",
+			"value":"appbox01"
+		},
+		{
+			"label":"Port number",
+			"type":"text",
+			"value":"random"
+		},
+		{
+			"label":"Log path",
+			"type":"text",
+			"value":"/app/prod/account-service/logs"
+		}
+	]
+}

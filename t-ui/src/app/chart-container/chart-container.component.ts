@@ -1,16 +1,18 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as echarts from 'echarts';
 
 @Component({
   selector: 'app-chart-container',
   templateUrl: './chart-container.component.html',
-  styleUrls: ['./chart-container.component.less']
+  styleUrls: ['./chart-container.component.less'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ChartContainerComponent implements OnInit {
-
   private nodeData: any[];
-  links: any[] = [];
+  private links: any[] = [];
+  displayInfo: boolean = false;
+
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
@@ -150,9 +152,24 @@ export class ChartContainerComponent implements OnInit {
       ]
   };
     lineChart.setOption(option);
+
+    lineChart.on('click', (param) => {
+        console.log('param---->', param);  // 打印出param, 可以看到里边有很多参数可以使用
+        // 获取节点点击的数组序号
+        let arrayIndex = param.dataIndex;
+        console.log('arrayIndex---->', arrayIndex);
+        console.log('name---->', param.name);
+        if (param.dataType === 'node') {
+            alert("clicked node" + param.name);
+            this.displayInfo = true;
+        } else {
+            alert("clicked arrow" + param.value);
+        }
+    });
+
   }
 
-  calculateLinks(relationShips: any[]) {
+  private calculateLinks(relationShips: any[]) {
     relationShips.forEach(relationShip => {
         let source = relationShip.componentId;
         relationShip.downstreamComponentIds.forEach(downStream => {

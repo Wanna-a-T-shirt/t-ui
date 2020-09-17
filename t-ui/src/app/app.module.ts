@@ -4,17 +4,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChartContainerComponent } from './chart-container/chart-container.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ComponentInfoComponent } from './component-info/component-info.component';
+import {SidebarModule} from 'primeng/sidebar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DialogModule} from 'primeng/dialog';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChartContainerComponent
+    ChartContainerComponent,
+    ComponentInfoComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SidebarModule,
+    BrowserAnimationsModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

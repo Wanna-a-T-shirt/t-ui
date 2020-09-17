@@ -1,180 +1,180 @@
 [
 	{
-		"componentId":"Component1",
+		"componentId":"UI",
 		"downstreamComponentIds":[
-			"Component4"
+			"users"
 		]
 	},
 	{
-		"componentId":"Component2",
+		"componentId":"dashboard",
 		"downstreamComponentIds":[
-			"Component4",
-			"Component5"
+			"users",
+			"announcements"
 		]
 	},
 	{
-		"componentId":"Component3",
+		"componentId":"admin",
 		"downstreamComponentIds":[
-			"Component5"
+			"announcements"
 		]
 	},
 	{
-		"componentId":"Component4",
+		"componentId":"users",
 		"downstreamComponentIds":[
-			"Component6"
+			"security"
 		]
 	},
 	{
-		"componentId":"Component5",
+		"componentId":"announcements",
 		"downstreamComponentIds":[
-			"Component8"
+			"workflow controller"
 		]
 	},
 	{
-		"componentId":"Component6",
+		"componentId":"security",
 		"downstreamComponentIds":[
-			"Component4",
-			"Component7",
-			"Component9"
+			"users",
+			"announcements adaptor",
+			"positions"
 		]
 	},
 	{
-		"componentId":"Component7",
+		"componentId":"announcements adaptor",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component8",
+		"componentId":"workflow controller",
 		"downstreamComponentIds":[
-			"Component7",
-			"Component11",
-			"Component13"
+			"announcements adaptor",
+			"autopull service",
+			"payments"
 		]
 	},
 	{
-		"componentId":"Component9",
+		"componentId":"positions",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component10",
+		"componentId":"accounnts",
 		"downstreamComponentIds":[
-			"Component13"
+			"payments"
 		]
 	},
 	{
-		"componentId":"Component11",
+		"componentId":"autopull service",
 		"downstreamComponentIds":[
-			"Component8",
-			"Component12",
-			"Component14"
+			"workflow controller",
+			"entitlement calculation",
+			"postings"
 		]
 	},
 	{
-		"componentId":"Component12",
+		"componentId":"entitlement calculation",
 		"downstreamComponentIds":[
-			"Component17"
+			"portal adaptor"
 		]
 	},
 	{
-		"componentId":"Component13",
+		"componentId":"payments",
 		"downstreamComponentIds":[
-			"Component8"
+			"workflow controller"
 		]
 	},
 	{
-		"componentId":"Component14",
+		"componentId":"postings",
 		"downstreamComponentIds":[
-			"Component17"
+			"portal adaptor"
 		]
 	},
 	{
-		"componentId":"Component15",
+		"componentId":"settlements",
 		"downstreamComponentIds":[
-			"Component13"
+			"payments"
 		]
 	},
 	{
-		"componentId":"Component16",
+		"componentId":"notifications",
 		"downstreamComponentIds":[
-			"Component17",
-			"Component21",
-			"Component22"
+			"portal adaptor",
+			"archive adaptor",
+			"alerts"
 		]
 	},
 	{
-		"componentId":"Component17",
+		"componentId":"portal adaptor",
 		"downstreamComponentIds":[
-			"Component16",
-			"Component18",
-			"Component19",
-			"Component21"
+			"notifications",
+			"portal",
+			"bots",
+			"archive adaptor"
 		]
 	},
 	{
-		"componentId":"Component18",
+		"componentId":"portal",
 		"downstreamComponentIds":[
-			"Component20",
-			"Component24",
-			"Component25"
+			"notification replay util",
+			"checklists",
+			"alert jobs"
 		]
 	},
 	{
-		"componentId":"Component19",
+		"componentId":"bots",
 		"downstreamComponentIds":[
-			"Component26",
-			"Component27"
+			"feeds",
+			"reports"
 		]
 	},
 	{
-		"componentId":"Component20",
+		"componentId":"notification replay util",
 		"downstreamComponentIds":[
-			"Component23"
+			"alerts UI"
 		]
 	},
 	{
-		"componentId":"Component21",
+		"componentId":"archive adaptor",
 		"downstreamComponentIds":[
-			"Component16",
-			"Component17",
-			"Component28",
-			"Component29"
+			"notifications",
+			"portal adaptor",
+			"jobs",
+			"central config"
 		]
 	},
 	{
-		"componentId":"Component22",
+		"componentId":"alerts",
 		"downstreamComponentIds":[
-			"Component30"
+			"business rules"
 		]
 	},
 	{
-		"componentId":"Component23",
+		"componentId":"alerts UI",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component24",
+		"componentId":"checklists",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component25",
+		"componentId":"alert jobs",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component26",
+		"componentId":"feeds",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component27",
+		"componentId":"reports",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component28",
+		"componentId":"jobs",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component29",
+		"componentId":"central config",
 		"downstreamComponentIds":[]
 	},
 	{
-		"componentId":"Component30",
+		"componentId":"business rules",
 		"downstreamComponentIds":[]
 	}
 ]

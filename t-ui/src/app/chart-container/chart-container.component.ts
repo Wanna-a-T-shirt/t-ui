@@ -21,15 +21,24 @@ export class ChartContainerComponent implements OnInit {
     this.getComponentList();
   }
 
-  private getComponentList(): void{
+  private getComponentList(): void {
     this.http.get('../../assets/relationship.json').subscribe((res: any[]) => {
       res.forEach(item => {
         item.name = item.componentId;
+        item.symbol = item.type === 'alerts' ? 'circle' : 'rect';
       });
       this.nodeData = res;
       this.calculateLinks(res);
       this.initCharts();
     });
+  }
+
+  private getRectColor(params): string {
+    if (params.data.type && params.data.type === 'alerts') {
+      return '#006270';
+    } else {
+      return '#00e0c7';
+    }
   }
 
   private getStatus(): void {
@@ -38,19 +47,6 @@ export class ChartContainerComponent implements OnInit {
     })
   }
 
-  private getRandomColor(): string {
-    const random = Math.ceil(Math.random() * 4);
-    switch (random) {
-      case 1:
-        return '#4bb6f4';
-      case 2:
-        return '#1f9ce4';
-      case 3:
-        return '#3e60c1';
-      case 4:
-        return '#5983fc';
-    }
-  }
 
   initCharts(): void {
     const ec = echarts as any;
@@ -58,130 +54,154 @@ export class ChartContainerComponent implements OnInit {
 
     const option = {
       title: {
-          text: 'Who Touched My Service?',
-          textStyle: {
-            color: '#eee'
-          }
+        text: 'Who Touched My Service?',
+        textStyle: {
+          color: '#eee'
+        }
       },
       tooltip: {},
+      color: [
+        '#006270',
+        '#00e0c7'
+      ],
       legend: {
         show: true,
+        x: 'right',
+        y: 'top',
+        orient: 'vertical',
+        padding: 10,
+        itemGap: 20,
+        inactiveColor: '#ccc',
         data: [{
-          name: 'Type 1',
-          icon: 'rect'
+          name: 'Alerts',
+          icon: 'circle',
+          textStyle: {
+            color: '#006270'
+          }
         },
         {
-          name: 'Type 1',
-          icon: 'rect'
-        }, {
-          name: 'Type 1',
-          icon: 'rect'
-        }, {
-          name: 'Type 1',
-          icon: 'rect'
-        }
-        ]
+          name: 'Others',
+          icon: 'rect',
+          textStyle: {
+            color: '#00e0c7'
+          }
+        }]
       },
       animationDurationUpdate: 1500,
       backgroundColor: '#2a394f',
       animationEasingUpdate: 'quinticInOut',
       series: [
-          {
-              type: 'graph',
-              layout: 'force',
-              force: {
-                repulsion: [700, 800], // 相距距离
-                edgeLength: 200,
-                layoutAnimation: true,
-                initLayout: 'circular'
+        {
+          type: 'graph',
+          layout: 'force',
+          force: {
+            repulsion: [700, 800], // 相距距离
+            edgeLength: 200,
+            layoutAnimation: true,
+            initLayout: 'circular'
+          },
+          symbolSize: [120, 60],
+          roam: true,
+          draggable: true,
+          focusNodeAdjacency: true,
+          // symbol: 'rect',
+          edgeSymbol: ['circle', 'arrow'],
+          edgeSymbolSize: [2, 10],
+          edgeLabel: {
+            fontSize: 20
+          },
+          categories: [
+            {
+              name: 'Alerts',
+              symbol: 'circle'
+            }, {
+              name: 'Others',
+              symbol: 'rect'
+            }
+          ],
+          data: this.nodeData,
+          links: this.links,
+          lineStyle: {
+            normal: {
+              color: '#fff',
+              opacity: 0.7,
+              width: 1,
+              curveness: 0.2
             },
-              symbolSize: [120, 60],
-              roam: true,
-              draggable: true,
-              focusNodeAdjacency: true,
-              symbol: 'rect',
-              edgeSymbol: ['circle', 'arrow'],
-              edgeSymbolSize: [2, 10],
-              edgeLabel: {
-                  fontSize: 20
-              },
-              categories: [
-                {
-                    name: 'normal',
-                    symbol: 'diamond'
-                }, {
-                    name: 'posting',
-                    symbol: 'rect'
-                }, {
-                    name: 'alerts',
-                    symbol: 'roundRect'
-                }, {
-                    name: 'ui',
-                    symbol: 'circle'
-                }
-            ],
-              data: this.nodeData,
-              links: this.links,
-              lineStyle: {
-                normal: {
-                  color: '#fff',
-                  opacity: 0.7,
-                  width: 1,
-                  curveness: 0.2
+            emphasis: {
+              color: '#fff',
+              opacity: 1,
+              width: 2,
+              curveness: 0.2,
+            }
+          },
+          itemStyle: {
+            normal: {
+              label: {
+                show: true,
+                position: 'insideTop',
+                fontFamily: 'sans-serif',
+                fontSize: 14,
+                formatter: (val) => {
+                  return this.formatLabel(val);
                 },
-                emphasis: {
-                  color: '#fff',
-                  opacity: 1,
-                  width: 2,
-                  curveness: 0.2,
-                }
-              },
-              itemStyle : {
-                normal: {
-                  label: {
-                    show: true,
-                    position: 'insideTop',
-                    fontFamily : 'sans-serif',
-                    fontSize : 14,
-                    formatter: (val) => {
-                     return this.formatLabel(val.name);
-                    }
+                rich: {
+                  color1: {
+                    color: '#fff'
                   },
-                  opacity: 1,
-                  color: (params) => { return this.getRandomColor(); }
+                  color2: {
+                    color: '#2a394f'
+                  }
                 },
-                emphasis: {
-                  label: {
-                    show: true
-                  },
-                  opacity: 1
-                }
+              },
+              opacity: 1,
+              color: (params) => { return this.getRectColor(params); }
+            },
+            emphasis: {
+              label: {
+                show: true
+              },
+              opacity: 1
             }
           }
+        }
       ]
-  };
+    };
     lineChart.setOption(option);
 
     lineChart.on('click', (param) => {
-        if (param.dataType === 'node') {
-            this.displayInfo = true;
-            this.componentName = param.name;
-        }
+      if (param.dataType === 'node') {
+        this.displayInfo = true;
+        this.componentName = param.name;
+      }
     });
   }
 
   private calculateLinks(relationShips: any[]) {
     relationShips.forEach(relationShip => {
-        let source = relationShip.componentId;
-        relationShip.downstreamComponentIds.forEach(downStream => {
-            this.links.push({'source': source, 'target': downStream});
-        });
+      let source = relationShip.componentId;
+      relationShip.downstreamComponentIds.forEach(downStream => {
+        this.links.push({ 'source': source, 'target': downStream });
+      });
     });
   }
 
-  private formatLabel(val: string) {
-    const newVal = val.replace(' ', '\n');
-    return newVal;
+  private formatLabel(val) {
+    const newVal = val.name.replace(' ', '\n');
+    if (val.data.type && val.data.type === 'alerts') {
+      return '{color1|' + newVal + '}';
+    } else {
+      const num = Math.ceil(Math.random() * 3);
+      switch (num) {
+        case 1:
+          return '{color2|' + newVal + '}';
+        case 2:
+          return '{color2|' + newVal + '}';
+        case 3:
+          return '{color2|' + newVal + '}';
+      }
+
+    }
   }
 
 }

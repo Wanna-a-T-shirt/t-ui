@@ -1,9 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as echarts from 'echarts';
-import 'echarts/lib/component/tooltip';
-import 'echarts/lib/component/title';
-import 'echarts/lib/component/toolbox';
 
 @Component({
   selector: 'app-chart-container',
@@ -25,12 +22,26 @@ export class ChartContainerComponent implements OnInit {
   private getComponentList(): void{
     this.http.get('../../assets/relationship.json').subscribe((res: any[]) => {
       res.forEach(item => {
-        item.name = item.componentId
+        item.name = item.componentId;
       });
       this.nodeData = res;
       this.calculateLinks(res);
       this.initCharts();
     });
+  }
+
+  private getRandomColor(): string {
+    const random = Math.ceil(Math.random() * 4);
+    switch (random) {
+      case 1:
+        return '#4bb6f4';
+      case 2:
+        return '#1f9ce4';
+      case 3:
+        return '#3e60c1';
+      case 4:
+        return '#5983fc';
+    }
   }
 
   initCharts(): void {
@@ -39,20 +50,42 @@ export class ChartContainerComponent implements OnInit {
 
     const option = {
       title: {
-          text: 'Graph 简单示例'
+          text: 'Who Touched My Service?',
+          textStyle: {
+            color: '#eee'
+          }
       },
       tooltip: {},
+      legend: {
+        show: true,
+        data: [{
+          name: 'Type 1',
+          icon: 'rect'
+        },
+        {
+          name: 'Type 1',
+          icon: 'rect'
+        }, {
+          name: 'Type 1',
+          icon: 'rect'
+        }, {
+          name: 'Type 1',
+          icon: 'rect'
+        }
+        ]
+      },
       animationDurationUpdate: 1500,
+      backgroundColor: '#2a394f',
       animationEasingUpdate: 'quinticInOut',
       series: [
           {
               type: 'graph',
               layout: 'force',
-              backgroundColor: 'rgba(128, 128, 128, 0.5)',
               force: {
-                repulsion: [300, 450], // 相距距离
-                edgeLength: [150, 200],
-                layoutAnimation: true
+                repulsion: [600, 700], // 相距距离
+                edgeLength: 200,
+                layoutAnimation: true,
+                initLayout: 'circular'
             },
               symbolSize: [100, 60],
               roam: true,
@@ -64,17 +97,57 @@ export class ChartContainerComponent implements OnInit {
                   position: 'insideTop'
               },
               edgeSymbol: ['circle', 'arrow'],
-              edgeSymbolSize: [4, 10],
+              edgeSymbolSize: [2, 10],
               edgeLabel: {
                   fontSize: 20
               },
+              categories: [
+                {
+                    name: 'normal',
+                    symbol: 'diamond'
+                }, {
+                    name: 'posting',
+                    symbol: 'rect'
+                }, {
+                    name: 'alerts',
+                    symbol: 'roundRect'
+                }, {
+                    name: 'ui',
+                    symbol: 'circle'
+                }
+            ],
               data: this.nodeData,
               links: this.links,
               lineStyle: {
-                  opacity: 0.9,
+                normal: {
+                  color: '#fff',
+                  opacity: 0.7,
+                  width: 1,
+                  curveness: 0.2
+                },
+                emphasis: {
+                  color: '#fff',
+                  opacity: 1,
                   width: 2,
-                  curveness: 0
-              }
+                  curveness: 0.2,
+                }
+              },
+              itemStyle : {
+                normal: {
+                  label: {
+                    show: true,
+                    position: 'insideTop'
+                  },
+                  opacity: 1,
+                  color: (params) => { return this.getRandomColor(); }
+                },
+                emphasis: {
+                  label: {
+                    show: true
+                  },
+                  opacity: 1
+                }
+            }
           }
       ]
   };

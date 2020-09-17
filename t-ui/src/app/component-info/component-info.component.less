@@ -1,5 +1,5 @@
 .component-info-screen {
-    width: 80vw;
+    width: 50vw;
     .p-dialog-header {
         background-color: #0066b3;
         border: 1px solid #0066b3;
@@ -27,14 +27,20 @@
     }
 
     .p-dialog-content {
-        padding: 1.5em 1em 1.5em 1em;
+        padding: 1em;
         background-color: white;
+        .link-info {
+            margin-bottom: 1em;
+        }
     }
 
     .p-card-body {
         background-color: #e8e8e8;
-        padding: 10px;
-        margin-bottom: 10px;
+        padding: .5em 1em 1em 1em;
+        margin-bottom: 1em;
+        .p-card-title {
+            font-weight: normal;
+        }
     }
 
     .info-section {
@@ -45,14 +51,14 @@
         .info-cell {
             display: flex;
             align-items: center;
-            height:30px;
-            line-height: 30px;
-            width: 300px;
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: .5em;
             .info-label {
-                min-width: 100px;
+                width: 130px;
             }
             .info-value {
-                width: 170px;
+                width: fit-content;
             }
         }
     }
@@ -60,10 +66,10 @@
     .link-info {
         .link-cell {
             display: flex;
-            font-size: 12px;
-            line-height: 30px;
+            font-size: 14px;
             .link-label {
-                min-width: 110px;
+                width: 130px;
+                margin-right: .2em;
             }
             .link-value {
                 color: blue;
@@ -89,5 +95,14 @@
     .p-button {
         padding: 0.3rem .5rem;
     }
-    
+    .p-panel {
+        .p-panel-content {
+            margin-bottom: 1em;
+        }
+        &.email-panel {
+            .p-panel-content {
+                margin-bottom: 0;
+            }
+        }
+    }
 }

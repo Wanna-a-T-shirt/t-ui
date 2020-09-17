@@ -44,7 +44,11 @@ export class ChartContainerComponent implements OnInit {
     if (params.data.type && params.data.type === 'alerts') {
       return '#006270';
     } else {
-      return '#00e0c7';
+      if(params.data.name === 'workflow controller'){
+        return 'red';
+      } else {
+        return '#00e0c7';
+      }
     }
   }
 
@@ -143,8 +147,8 @@ export class ChartContainerComponent implements OnInit {
           },
           itemStyle: {
             normal: {
-              borderColor: '#fff',
-              borderWidth: 2 ,
+              // borderColor: '#fff',
+              borderWidth: 1 ,
               borderType: 'solid' ,
               label: {
                 show: true,
@@ -156,14 +160,23 @@ export class ChartContainerComponent implements OnInit {
                 rich: {
                   color1: {
                     color: '#fff',
-                    fontSize: 16,
+                    fontSize: 14,
                     align: 'center'
                   },
                   color2: {
                     color: '#2a394f',
-                    fontSize: 16,
+                    fontSize: 14,
                     align: 'center'
+                  },
+                  status1: {
+                    color: 'red',
+                    fontSize: 16
+                  },
+                  status2: {
+                    color: 'green',
+                    fontSize: 16
                   }
+
                 },
               },
               opacity: 1,
@@ -205,6 +218,17 @@ export class ChartContainerComponent implements OnInit {
     } else {
       return '{color2|' + newVal + '}';
     }
+    // if (val.data.type && val.data.type === 'alerts') {
+    //   // return '{color1|' + '●  ' + newVal + '}';
+    //   return '{status1|' + '●  ' + '}{color1|' + newVal + '}';
+    // } else {
+    //   const num = Math.ceil(Math.random() * 5);
+    //   if (num <= 2) {
+    //     return '{status1|' + '●  ' + '}{color2|' + newVal + '}';
+    //   } else {
+    //     return '{status2|' + '●  ' + '}{color2|' + newVal + '}';
+    //   }
+    // }
   }
 
 }

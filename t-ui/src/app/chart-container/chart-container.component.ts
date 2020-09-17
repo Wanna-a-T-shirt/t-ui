@@ -32,6 +32,7 @@ export class ChartContainerComponent implements OnInit {
         //     "borderColor": item.type === 'alerts' ? 'green' : 'red'
         //   }
         // }
+        item.category = item.type === 'alerts' ? 0 : 1;
       });
       this.nodeData = res;
       this.calculateLinks(res);

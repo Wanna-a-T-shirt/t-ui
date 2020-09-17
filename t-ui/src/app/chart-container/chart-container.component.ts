@@ -1,5 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import * as echarts from 'echarts';
+import 'echarts/lib/component/tooltip';
+import 'echarts/lib/component/title';
+import 'echarts/lib/component/toolbox';
 
 
 @Component({
@@ -9,10 +13,21 @@ import * as echarts from 'echarts';
 })
 export class ChartContainerComponent implements OnInit {
 
-  constructor() { }
+  private nodeData: any[];
+  constructor(
+    private http: HttpClient
+  ) { }
 
   ngOnInit(): void {
-    this.initCharts();
+    this.getComponentList();
+    // this.initCharts();
+  }
+
+  private getComponentList(): void{
+    this.http.get('../../assets/relationship.json').subscribe((res: any[]) => {
+      this.nodeData = res;
+      this.initCharts();
+    });
   }
 
   initCharts(): void {
@@ -21,7 +36,7 @@ export class ChartContainerComponent implements OnInit {
 
     const option = {
       title: {
-          text: 'example'
+          text: 'Graph 简单示例'
       },
       tooltip: {},
       animationDurationUpdate: 1500,
@@ -29,7 +44,12 @@ export class ChartContainerComponent implements OnInit {
       series: [
           {
               type: 'graph',
-              layout: 'none',
+              layout: 'force',
+              force: {
+                repulsion: [300, 450],//相距距离
+                edgeLength: [150, 200],
+                layoutAnimation: true
+            },
               symbolSize: 50,
               roam: true,
               label: {
@@ -40,24 +60,7 @@ export class ChartContainerComponent implements OnInit {
               edgeLabel: {
                   fontSize: 20
               },
-              data: [{
-                  name: '节点1',
-                  x: 300,
-                  y: 300
-              }, {
-                  name: '节点2',
-                  x: 800,
-                  y: 300
-              }, {
-                  name: '节点3',
-                  x: 550,
-                  y: 100
-              }, {
-                  name: '节点4',
-                  x: 550,
-                  y: 500
-              }],
-              // links: [],
+              data: this.nodeData,
               links: [{
                   source: 0,
                   target: 1,
@@ -102,5 +105,7 @@ export class ChartContainerComponent implements OnInit {
     lineChart.setOption(option);
 
   }
+
+
 
 }

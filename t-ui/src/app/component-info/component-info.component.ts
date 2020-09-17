@@ -13,7 +13,9 @@ export class ComponentInfoComponent implements OnInit, OnChanges {
   @Output() isShowChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() componentName: string;
 
-  details: any[] = [];
+  textDetails: any[] = [];
+  linkDetails: any[] = [];
+  emailDetails: any[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -29,15 +31,32 @@ export class ComponentInfoComponent implements OnInit, OnChanges {
   }
 
   private getDails(): void {
+    this.textDetails = [];
+    this.linkDetails = [];
+    this.emailDetails = [];
     this.http.get('../../assets/details.json').subscribe(res => {
        Object.keys(res).filter(key => {
         if (key === this.componentName) { 
-          this.details =  res[key]; 
-          return;
+          let details =  res[key]; 
+          this.groupDetails(details);
         } 
       })
     });
   }
+
+ private groupDetails(details: any[]) {
+    details.forEach(detail => {
+      if (detail.type === "text") {
+        this.textDetails.push(detail);
+      }
+      if (detail.type === "email") {
+        this.emailDetails.push(detail);
+      }
+      if (detail.type === "link") {
+        this.linkDetails.push(detail);
+      }
+  });
+}
 
   closeScreen() {
     this.isShowChange.emit(false);

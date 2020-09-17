@@ -8,6 +8,7 @@ import { ComponentInfoComponent } from './component-info/component-info.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
+import {CardModule} from 'primeng/card';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {ButtonModule} from 'primeng/button';
     HttpClientModule,
     BrowserAnimationsModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

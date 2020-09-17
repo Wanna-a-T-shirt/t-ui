@@ -5,7 +5,6 @@ import 'echarts/lib/component/tooltip';
 import 'echarts/lib/component/title';
 import 'echarts/lib/component/toolbox';
 
-
 @Component({
   selector: 'app-chart-container',
   templateUrl: './chart-container.component.html',
@@ -14,9 +13,8 @@ import 'echarts/lib/component/toolbox';
 export class ChartContainerComponent implements OnInit {
 
   private nodeData: any[];
-  constructor(
-    private http: HttpClient
-  ) { }
+  links: any[] = [];
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.getComponentList();
@@ -26,6 +24,7 @@ export class ChartContainerComponent implements OnInit {
   private getComponentList(): void{
     this.http.get('../../assets/relationship.json').subscribe((res: any[]) => {
       this.nodeData = res;
+      this.calculateLinks(res);
       this.initCharts();
     });
   }
@@ -46,7 +45,7 @@ export class ChartContainerComponent implements OnInit {
               type: 'graph',
               layout: 'force',
               force: {
-                repulsion: [300, 450],//相距距离
+                repulsion: [300, 450], // 相距距离
                 edgeLength: [150, 200],
                 layoutAnimation: true
             },
@@ -61,39 +60,7 @@ export class ChartContainerComponent implements OnInit {
                   fontSize: 20
               },
               data: this.nodeData,
-              links: [{
-                  source: 0,
-                  target: 1,
-                  symbolSize: [5, 20],
-                  label: {
-                      show: true
-                  },
-                  lineStyle: {
-                      width: 5,
-                      curveness: 0.2
-                  }
-              }, {
-                  source: '节点2',
-                  target: '节点1',
-                  label: {
-                      show: true
-                  },
-                  lineStyle: {
-                      curveness: 0.2
-                  }
-              }, {
-                  source: '节点1',
-                  target: '节点3'
-              }, {
-                  source: '节点2',
-                  target: '节点3'
-              }, {
-                  source: '节点2',
-                  target: '节点4'
-              }, {
-                  source: '节点1',
-                  target: '节点4'
-              }],
+              links: this.links,
               lineStyle: {
                   opacity: 0.9,
                   width: 2,
@@ -106,6 +73,14 @@ export class ChartContainerComponent implements OnInit {
 
   }
 
-
-
+  calculateLinks(relationShips: any[]) {
+    relationShips.forEach(relationShip => {
+        let source = relationShip.componentId;
+        relationShip.downstreamComponentIds.forEach(downStream => {
+            this.links.push({'source': source, 'target': downStream});
+        });
+    });
+    console.log(this.links);
+  }
+  
 }

@@ -23,6 +23,7 @@ export class ChartContainerComponent implements OnInit {
     this.http.get('../../assets/relationship.json').subscribe((res: any[]) => {
       res.forEach(item => {
         item.name = item.componentId;
+        item.symbol = item.type === 'alerts' ? 'circle' : 'rect';
       });
       this.nodeData = res;
       this.calculateLinks(res);
@@ -30,17 +31,11 @@ export class ChartContainerComponent implements OnInit {
     });
   }
 
-  private getRandomColor(): string {
-    const random = Math.ceil(Math.random() * 4);
-    switch (random) {
-      case 1:
-        return '#4bb6f4';
-      case 2:
-        return '#1f9ce4';
-      case 3:
-        return '#3e60c1';
-      case 4:
-        return '#5983fc';
+  private getRectColor(params): string {
+    if (params.data.type && params.data.type === 'alerts'){
+      return '#006270';
+    } else {
+      return '#00e0c7';
     }
   }
 
@@ -56,23 +51,32 @@ export class ChartContainerComponent implements OnInit {
           }
       },
       tooltip: {},
+      color: [
+        '#006270',
+        '#00e0c7'
+      ],
       legend: {
         show: true,
+        x: 'right',
+        y: 'top',
+        orient: 'vertical',
+        padding: 10,
+        itemGap: 20,
+        inactiveColor: '#ccc',
         data: [{
-          name: 'Type 1',
-          icon: 'rect'
+          name: 'Alerts',
+          icon: 'circle',
+          textStyle: {
+              color: '#006270'
+          }
         },
         {
-          name: 'Type 1',
-          icon: 'rect'
-        }, {
-          name: 'Type 1',
-          icon: 'rect'
-        }, {
-          name: 'Type 1',
-          icon: 'rect'
+          name: 'Others',
+          icon: 'rect',
+          textStyle: {
+            color: '#00e0c7'
         }
-        ]
+        }]
       },
       animationDurationUpdate: 1500,
       backgroundColor: '#2a394f',
@@ -91,7 +95,7 @@ export class ChartContainerComponent implements OnInit {
               roam: true,
               draggable: true,
               focusNodeAdjacency: true,
-              symbol: 'rect',
+              // symbol: 'rect',
               edgeSymbol: ['circle', 'arrow'],
               edgeSymbolSize: [2, 10],
               edgeLabel: {
@@ -99,17 +103,11 @@ export class ChartContainerComponent implements OnInit {
               },
               categories: [
                 {
-                    name: 'normal',
-                    symbol: 'diamond'
+                  name: 'Alerts',
+                  symbol: 'circle'
                 }, {
-                    name: 'posting',
-                    symbol: 'rect'
-                }, {
-                    name: 'alerts',
-                    symbol: 'roundRect'
-                }, {
-                    name: 'ui',
-                    symbol: 'circle'
+                  name: 'Others',
+                  symbol: 'rect'
                 }
             ],
               data: this.nodeData,
@@ -136,11 +134,19 @@ export class ChartContainerComponent implements OnInit {
                     fontFamily : 'sans-serif',
                     fontSize : 14,
                     formatter: (val) => {
-                     return this.formatLabel(val.name);
-                    }
+                     return this.formatLabel(val);
+                    },
+                    rich: {
+                      color1: {
+                          color: '#fff'
+                      },
+                      color2: {
+                          color: '#2a394f'
+                      }
+                  },
                   },
                   opacity: 1,
-                  color: (params) => { return this.getRandomColor(); }
+                  color: (params) => { return this.getRectColor(params); }
                 },
                 emphasis: {
                   label: {
@@ -179,9 +185,22 @@ export class ChartContainerComponent implements OnInit {
     });
   }
 
-  private formatLabel(val: string) {
-    const newVal = val.replace(' ', '\n');
-    return newVal;
+  private formatLabel(val) {
+    const newVal = val.name.replace(' ', '\n');
+    if (val.data.type && val.data.type === 'alerts'){
+      return '{color1|' + newVal + '}';
+    } else {
+      const num = Math.ceil(Math.random() * 3);
+      switch(num){
+        case 1:
+          return '{color2|' + newVal + '}';
+        case 2:
+          return '{color2|' + newVal + '}';
+        case 3:
+          return '{color2|' + newVal + '}';
+      }
+
+    }
   }
 
 }

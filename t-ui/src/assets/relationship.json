@@ -1,180 +1,210 @@
 [
-	{
-		"componentId":"UI",
-		"downstreamComponentIds":[
-			"users"
-		]
-	},
-	{
-		"componentId":"dashboard",
-		"downstreamComponentIds":[
-			"users",
-			"announcements"
-		]
-	},
-	{
-		"componentId":"admin",
-		"downstreamComponentIds":[
-			"announcements"
-		]
-	},
-	{
-		"componentId":"users",
-		"downstreamComponentIds":[
-			"security"
-		]
-	},
-	{
-		"componentId":"announcements",
-		"downstreamComponentIds":[
-			"workflow controller"
-		]
-	},
-	{
-		"componentId":"security",
-		"downstreamComponentIds":[
-			"users",
-			"announcements adaptor",
-			"positions"
-		]
-	},
-	{
-		"componentId":"announcements adaptor",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"workflow controller",
-		"downstreamComponentIds":[
-			"announcements adaptor",
-			"autopull service",
-			"payments"
-		]
-	},
-	{
-		"componentId":"positions",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"accounnts",
-		"downstreamComponentIds":[
-			"payments"
-		]
-	},
-	{
-		"componentId":"autopull service",
-		"downstreamComponentIds":[
-			"workflow controller",
-			"entitlement calculation",
-			"postings"
-		]
-	},
-	{
-		"componentId":"entitlement calculation",
-		"downstreamComponentIds":[
-			"portal adaptor"
-		]
-	},
-	{
-		"componentId":"payments",
-		"downstreamComponentIds":[
-			"workflow controller"
-		]
-	},
-	{
-		"componentId":"postings",
-		"downstreamComponentIds":[
-			"portal adaptor"
-		]
-	},
-	{
-		"componentId":"settlements",
-		"downstreamComponentIds":[
-			"payments"
-		]
-	},
-	{
-		"componentId":"notifications",
-		"downstreamComponentIds":[
-			"portal adaptor",
-			"archive adaptor",
-			"alerts"
-		]
-	},
-	{
-		"componentId":"portal adaptor",
-		"downstreamComponentIds":[
-			"notifications",
-			"portal",
-			"bots",
-			"archive adaptor"
-		]
-	},
-	{
-		"componentId":"portal",
-		"downstreamComponentIds":[
-			"notification replay util",
-			"checklists",
-			"alert jobs"
-		]
-	},
-	{
-		"componentId":"bots",
-		"downstreamComponentIds":[
-			"feeds",
-			"reports"
-		]
-	},
-	{
-		"componentId":"notification replay util",
-		"downstreamComponentIds":[
-			"alerts UI"
-		]
-	},
-	{
-		"componentId":"archive adaptor",
-		"downstreamComponentIds":[
-			"notifications",
-			"portal adaptor",
-			"jobs",
-			"central config"
-		]
-	},
-	{
-		"componentId":"alerts",
-		"downstreamComponentIds":[
-			"business rules"
-		]
-	},
-	{
-		"componentId":"alerts UI",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"checklists",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"alert jobs",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"feeds",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"reports",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"jobs",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"central config",
-		"downstreamComponentIds":[]
-	},
-	{
-		"componentId":"business rules",
-		"downstreamComponentIds":[]
-	}
+  {
+    "componentId": "UI",
+    "type": "others",
+    "downstreamComponentIds": [
+      "users"
+    ]
+  },
+  {
+    "componentId": "gateway",
+    "type": "others",
+    "downstreamComponentIds": [
+      "users",
+      "announcements"
+    ]
+  },
+  {
+    "componentId": "admin",
+    "type": "others",
+    "downstreamComponentIds": [
+      "announcements"
+    ]
+  },
+  {
+    "componentId": "users",
+    "type": "others",
+    "downstreamComponentIds": [
+      "security"
+    ]
+  },
+  {
+    "componentId": "announcements",
+    "type": "others",
+    "downstreamComponentIds": [
+      "workflow controller"
+    ]
+  },
+  {
+    "componentId": "security",
+    "type": "others",
+    "downstreamComponentIds": [
+      "users",
+      "announcements adaptor",
+      "positions"
+    ]
+  },
+  {
+    "componentId": "announcements adaptor",
+    "type": "others",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "workflow controller",
+    "type": "others",
+    "downstreamComponentIds": [
+      "announcements adaptor",
+      "autopull service",
+      "payments"
+    ]
+  },
+  {
+    "componentId": "positions",
+    "type": "others",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "accounnts",
+    "type": "others",
+    "downstreamComponentIds": [
+      "payments"
+    ]
+  },
+  {
+    "componentId": "autopull service",
+    "type": "others",
+    "downstreamComponentIds": [
+      "workflow controller",
+      "entitlement calculation",
+      "postings"
+    ]
+  },
+  {
+    "componentId": "entitlement calculation",
+    "type": "others",
+    "downstreamComponentIds": [
+      "portal adaptor"
+    ]
+  },
+  {
+    "componentId": "payments",
+    "type": "others",
+    "downstreamComponentIds": [
+      "workflow controller"
+    ]
+  },
+  {
+    "componentId": "postings",
+    "type": "others",
+    "downstreamComponentIds": [
+      "portal adaptor"
+    ]
+  },
+  {
+    "componentId": "settlements",
+    "type": "others",
+    "downstreamComponentIds": [
+      "payments"
+    ]
+  },
+  {
+    "componentId": "notifications",
+    "type": "others",
+    "downstreamComponentIds": [
+      "portal adaptor",
+      "archive adaptor",
+      "alerts"
+    ]
+  },
+  {
+    "componentId": "portal adaptor",
+    "type": "others",
+    "downstreamComponentIds": [
+      "notifications",
+      "portal",
+      "bots",
+      "archive adaptor"
+    ]
+  },
+  {
+    "componentId": "portal",
+    "type": "others",
+    "downstreamComponentIds": [
+      "notification replay util",
+      "checklists",
+      "alert jobs"
+    ]
+  },
+  {
+    "componentId": "bots",
+    "type": "others",
+    "downstreamComponentIds": [
+      "feeds",
+      "reports"
+    ]
+  },
+  {
+    "componentId": "notification replay util",
+    "type": "alerts",
+    "downstreamComponentIds": [
+      "alerts UI"
+    ]
+  },
+  {
+    "componentId": "archive adaptor",
+    "type": "others",
+    "downstreamComponentIds": [
+      "notifications",
+      "portal adaptor",
+      "jobs",
+      "central config"
+    ]
+  },
+  {
+    "componentId": "alerts",
+    "type": "alerts",
+    "downstreamComponentIds": [
+      "business rules"
+    ]
+  },
+  {
+    "componentId": "alerts UI",
+    "type": "alerts",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "checklists",
+    "type": "others",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "alert jobs",
+    "type": "alerts",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "feeds",
+    "type": "others",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "reports",
+    "type": "others",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "jobs",
+    "type": "others",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "central config",
+    "type": "others",
+    "downstreamComponentIds": []
+  },
+  {
+    "componentId": "business rules",
+    "type": "others",
+    "downstreamComponentIds": []
+  }
 ]

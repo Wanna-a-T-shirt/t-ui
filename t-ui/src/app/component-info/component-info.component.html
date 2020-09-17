@@ -1,4 +1,38 @@
-<p-dialog header="Info" styleClass="component-info-screen" [(visible)]="isShow" [modal]="true" 
+<p-dialog [header]="componentName" styleClass="component-info-screen" [(visible)]="isShow" [modal]="true" 
     (onHide)="closeScreen()" [maximizable]="true"> 
-    {{ details }}
+    <div>
+        <p-card header="Info">
+            <div class="info-section"> 
+                <div class="info-cell" *ngFor="let detail of textDetails"> 
+                    <span class="info-label">{{detail.label}}</span>
+                    <div class="info-value">{{detail.value}}</div>
+               </div>
+            </div>
+        </p-card>
+
+        <p-card header="Link">
+            <div class="link-info" *ngFor="let detail of linkDetails">
+                <div class="link-cell">
+                    <span class="link-label">{{detail.label}}</span>
+                    <a class="link-value"> 
+                        <span>{{detail.value}}</span>
+                    </a>
+                </div>
+
+            </div>
+        </p-card>
+
+       <p-card header="Contact Email">
+           <div class="email-info"> 
+            <div class="email-cell" *ngFor="let detail of emailDetails"> 
+                <span class="email-label">{{detail.label}}</span>
+                <div class="email-value">{{detail.value}}</div>
+            </div>
+            <div class="operation-button">  
+                <button type="button" pButton class="ui-button-secondary" icon="pi pi-check" label="Send Email"> </button>
+            </div>
+           </div>
+        
+       </p-card>
+    </div>
 </p-dialog>

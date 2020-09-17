@@ -13,7 +13,7 @@ export class ComponentInfoComponent implements OnInit, OnChanges {
   @Output() isShowChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() componentName: string;
 
-  details: any;
+  details: any[] = [];
 
   constructor(private http: HttpClient) { }
 
@@ -30,7 +30,12 @@ export class ComponentInfoComponent implements OnInit, OnChanges {
 
   private getDails(): void {
     this.http.get('../../assets/details.json').subscribe(res => {
-      this.details = res;
+       Object.keys(res).filter(key => {
+        if (key === this.componentName) { 
+          this.details =  res[key]; 
+          return;
+        } 
+      })
     });
   }
 

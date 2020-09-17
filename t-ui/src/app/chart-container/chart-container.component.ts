@@ -80,7 +80,6 @@ export class ChartContainerComponent implements OnInit {
             this.links.push({'source': source, 'target': downStream});
         });
     });
-    console.log(this.links);
   }
   
 }

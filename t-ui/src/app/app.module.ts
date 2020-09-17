@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { ChartContainerComponent } from './chart-container/chart-container.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentInfoComponent } from './component-info/component-info.component';
-import {SidebarModule} from 'primeng/sidebar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
@@ -22,7 +21,6 @@ import {ButtonModule} from 'primeng/button';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SidebarModule,
     BrowserAnimationsModule,
     DialogModule,
     ButtonModule

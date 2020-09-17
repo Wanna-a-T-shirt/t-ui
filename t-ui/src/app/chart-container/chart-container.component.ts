@@ -90,20 +90,16 @@ export class ChartContainerComponent implements OnInit {
               type: 'graph',
               layout: 'force',
               force: {
-                repulsion: [600, 700], // 相距距离
+                repulsion: [700, 800], // 相距距离
                 edgeLength: 200,
                 layoutAnimation: true,
                 initLayout: 'circular'
             },
-              symbolSize: [100, 60],
+              symbolSize: [120, 60],
               roam: true,
               draggable: true,
               focusNodeAdjacency: true,
               symbol: 'rect',
-              label: {
-                  show: true,
-                  position: 'insideTop'
-              },
               edgeSymbol: ['circle', 'arrow'],
               edgeSymbolSize: [2, 10],
               edgeLabel: {
@@ -144,7 +140,12 @@ export class ChartContainerComponent implements OnInit {
                 normal: {
                   label: {
                     show: true,
-                    position: 'insideTop'
+                    position: 'insideTop',
+                    fontFamily : 'sans-serif',
+                    fontSize : 14,
+                    formatter: (val) => {
+                     return this.formatLabel(val.name);
+                    }
                   },
                   opacity: 1,
                   color: (params) => { return this.getRandomColor(); }
@@ -176,6 +177,11 @@ export class ChartContainerComponent implements OnInit {
             this.links.push({'source': source, 'target': downStream});
         });
     });
+  }
+
+  private formatLabel(val: string) {
+    const newVal = val.replace(' ', '\n');
+    return newVal;
   }
 
 }

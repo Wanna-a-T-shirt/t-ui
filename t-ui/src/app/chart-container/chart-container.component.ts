@@ -18,11 +18,13 @@ export class ChartContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getComponentList();
-    // this.initCharts();
   }
 
   private getComponentList(): void{
     this.http.get('../../assets/relationship.json').subscribe((res: any[]) => {
+      res.forEach(item => {
+        item.name = item.componentId
+      });
       this.nodeData = res;
       this.calculateLinks(res);
       this.initCharts();
@@ -44,15 +46,20 @@ export class ChartContainerComponent implements OnInit {
           {
               type: 'graph',
               layout: 'force',
+              backgroundColor: 'rgba(128, 128, 128, 0.5)',
               force: {
                 repulsion: [300, 450], // 相距距离
                 edgeLength: [150, 200],
                 layoutAnimation: true
             },
-              symbolSize: 50,
+              symbolSize: [100, 60],
               roam: true,
+              draggable: true,
+              focusNodeAdjacency: true,
+              symbol: 'rect',
               label: {
-                  show: true
+                  show: true,
+                  position: 'insideTop'
               },
               edgeSymbol: ['circle', 'arrow'],
               edgeSymbolSize: [4, 10],
@@ -81,5 +88,5 @@ export class ChartContainerComponent implements OnInit {
         });
     });
   }
-  
+
 }

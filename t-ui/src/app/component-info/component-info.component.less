@@ -107,11 +107,28 @@
     .p-button {
         padding: 0.3rem .5rem;
     }
+
+    .commit-section {
+        display: flex;
+        flex-direction: column;
+        .commit-cell {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            .commit-info {
+                .commit-id {
+                    color: #2196f3;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
     .p-panel {
         .p-panel-content {
             margin-bottom: 1em;
         }
-        &.email-panel {
+        &.commit-panel {
             .p-panel-content {
                 margin-bottom: 0;
             }

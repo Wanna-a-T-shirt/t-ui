@@ -145,7 +145,7 @@
   },
   {
     "componentId": "notification replay util",
-    "type": "alerts",
+    "type": "others",
     "downstreamComponentIds": [
       "alerts UI"
     ]
